@@ -18,7 +18,7 @@ reddit_account = praw.Reddit(
 # collected subreddits most recent posts from ['StockMarket', 'stocks', 'wallstreetbets']
 communities = ['StockMarket', 'stocks', 'wallstreetbets']
 scrap = ScrapReddit(communities, reddit_account)
-subreddits_df = scrap.scrap_subreddits()
+subreddits_df = scrap.scrap_subreddits(post_num=1000)
 
 # clean data by:
 # (1) removing posts posted in 6 hours
@@ -28,7 +28,7 @@ current_time = datetime.datetime.now()
 subreddits_df.to_csv(f'stock_sr_{current_time}.csv')
 
 # subreddits_df = pd.read_csv('stock_sr_2024-02-24 22:39:01.807778.csv')
-dataclean = CleanData(subreddits_df, current_time) # collected 600 posts with labels; to change collected num see 'data_clean.py'
+dataclean = CleanData(subreddits_df, current_time, labeled_datapoints=300) # collected 600 posts with labels; to change collected num see 'data_clean.py'
 cleaned_data = dataclean.cleaned_data()
 
 

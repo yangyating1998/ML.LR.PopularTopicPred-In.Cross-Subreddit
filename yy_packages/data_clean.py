@@ -3,16 +3,17 @@ import pytz
 import pandas as pd
 
 class CleanData:
-    def __init__(self, data, current_time, datapoints_num = 300):
+    def __init__(self, data, current_time, labeled_datapoints=300):
         self.data = data
         self.current_time = current_time
-        self.collected_num = datapoints_num
-    # remove posts posted in 6 hours.
-    def drop_recent(self):
+        self.collected_num = labeled_datapoints
+
+    # remove posts posted in drop_hour (4, by default) hours.
+    def drop_recent(self, drop_hour=4):
         centraltime = pytz.timezone('America/Chicago')
         self.data['posted_time'] = pd.to_datetime(self.data.created_utc, unit='s').dt.tz_localize('UTC').dt.tz_convert(centraltime)
 
-        timethreshold = self.current_time + timedelta(hours=-6)
+        timethreshold = self.current_time + timedelta(hours=-drop_hour)
         timeshreshold_central = timethreshold.astimezone(centraltime)
 
         new_data = self.data[self.data['posted_time'] < timeshreshold_central]
@@ -27,8 +28,8 @@ class CleanData:
         return data
 
     # get cleaned dataframe
-    def cleaned_data(self):
-        new_data = self.drop_recent()
+    def cleaned_data(self, drop_hour=4):
+        new_data = self.drop_recent(drop_hour=drop_hour)
         new_data['selftext'] = new_data['selftext'].fillna(' ')
         new_data['title'] = new_data['title'].fillna(' ')
         new_data['text'] = new_data['title'] + new_data['selftext']

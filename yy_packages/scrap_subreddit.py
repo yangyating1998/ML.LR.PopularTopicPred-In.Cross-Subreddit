@@ -7,11 +7,11 @@ class ScrapReddit():
         self.communities = communities
         self.reddit = reddit_account
 
-    def scrap_subreddits(self):
+    def scrap_subreddits(self, post_num = 1000):
         posts = []
         for community in self.communities:
             get_data = self.reddit.subreddit(community)
-            sr_800 = get_data.new(limit=1000)
+            sr_800 = get_data.new(limit=post_num)
             for submission in sr_800:
                 post = {}
                 post['subreddit'] = community
