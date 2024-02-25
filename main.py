@@ -1,16 +1,12 @@
-# existing packages
+# existing yy_packages
 import praw
 import datetime
-from sklearn.model_selection import train_test_split
-import pandas as pd
 
-
-# created packages
-from scrap_subreddit import ScrapReddit
-from data_clean import CleanData
-from vectorize import text_preparation
-from logistic_regression import LogisticModel
-from model_data import ModelData
+# created yy_packages
+from yy_packages.scrap_subreddit import ScrapReddit
+from yy_packages.data_clean import CleanData
+from yy_packages.logistic_regression import LogisticModel
+from yy_packages.model_data import ModelData
 
 #use a developer id and secret
 reddit_account = praw.Reddit(
