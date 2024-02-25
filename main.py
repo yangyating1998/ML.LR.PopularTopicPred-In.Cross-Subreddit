@@ -14,9 +14,9 @@ from model_data import ModelData
 
 #use a developer id and secret
 reddit_account = praw.Reddit(
-    client_id="uMdwYL9sL5B52h2YDO58Tg",
-    client_secret="_SbSM6dJNf6s9Jkt7dQ02pO0vw0LGA",
-    user_agent="script by u/Dazzling_Store4982",
+    client_id="your_id",
+    client_secret="your_secret",
+    user_agent="script by u/your_name",
 )
 
 # collected subreddits most recent posts from ['StockMarket', 'stocks', 'wallstreetbets']
