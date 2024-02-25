@@ -17,7 +17,7 @@ Trained model was used to predict:
 - Use authorized [reddit_account](main.py) to scrap n (n=1000, by default) most recent posts from each subreddit and organize them in a dataframe
 
 ### [Data Cleaning](yy_packages/data_clean.py)
-- Drop posts posted inside n (n=4, by default) hours.
+- Drop posts posted within n (n=4, by default) hours.
 - Label n (n=300, by default) posts with highest [score](https://www.reddit.com/wiki/faq/) as popular and n (n=300, by default) with least [score](https://www.reddit.com/wiki/faq/) as unpopular. (score: upvotes - downvotes)
 - Drop unlabeled posts.
 - Concat title and content as a new column named 'text'.
