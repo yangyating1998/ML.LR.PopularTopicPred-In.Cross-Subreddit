@@ -11,7 +11,7 @@ Trained model was used to predict:
 
 (2) the popularity of posts from other similar subreddit communities.
 
-## Steps
+## Packages
 ### [Scrap reddit posts](yy_packages/scrap_subreddit.py)
 - Before start: get [reddit authorized credentials](https://www.reddit.com/prefs/apps)
 - Use authorized [reddit_account](main.py) to scrap n (n=1000, by default) most recent posts from each subreddit and organize them in a dataframe
