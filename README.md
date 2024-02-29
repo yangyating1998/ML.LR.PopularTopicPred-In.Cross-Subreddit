@@ -1,5 +1,8 @@
 # Objectives
-**This project trains [logistic regression models](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) (popularity ~ text) with [reddit](https://www.reddit.com/) posts.**
+
+**It demonstrates the process using three similar subreddits: r/stocks, r/StockMarket, and r/wallstreetbets. However, the code is designed to easily accommodate other subreddit communities by simply updating the list of communities in the main code.**
+
+This project trains [logistic regression models](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) (popularity ~ text) with [reddit](https://www.reddit.com/) posts.
 
 - Code shows examples of three similar subreddits: [r/stocks](https://www.reddit.com/r/stocks/) | [r/StockMarket](https://www.reddit.com/r/StockMarket/) | [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/)
 
