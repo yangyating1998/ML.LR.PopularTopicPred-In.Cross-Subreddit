@@ -1,20 +1,21 @@
 # Objectives
 
-**It demonstrates the process using three similar subreddits: r/stocks, r/StockMarket, and r/wallstreetbets. However, the code is designed to easily accommodate other subreddit communities by simply updating the list of communities in the main code.**
-
 This project trains [logistic regression models](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) (popularity ~ text) with [reddit](https://www.reddit.com/) posts.
 
 - Code shows examples of three similar subreddits: [r/stocks](https://www.reddit.com/r/stocks/) | [r/StockMarket](https://www.reddit.com/r/StockMarket/) | [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/)
 
-- Subreddits can be easily replaced in [main code](main.py) - communities = ['StockMarket', 'stocks', 'wallstreetbets']
+- However, these subreddits can be easily replaced in [main code](main.py) - communities = ['StockMarket', 'stocks', 'wallstreetbets']
 
-Trained model was used to predict:
+Trained model can be used to predict:
 
 (1) the popularity of test posts inside the same subreddit community. 
 
 (2) the popularity of posts from other similar subreddit communities.
 
-## Packages
+## Usage
+
+This project includes custom-written packages to facilitate the process:
+
 ### [Scrap reddit posts](yy_packages/scrap_subreddit.py)
 - Before start: get [reddit authorized credentials](https://www.reddit.com/prefs/apps)
 - Use authorized [reddit_account](main.py) to scrap n (n=1000, by default) most recent posts from each subreddit and organize them in a dataframe
