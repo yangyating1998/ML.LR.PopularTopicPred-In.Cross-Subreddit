@@ -23,7 +23,14 @@ Trained model was used to predict:
 - Concat title and content as a new column named 'text'.
 
 ### [Text Data Vectorization](yy_packages/vectorize.py)
+- Preprocess text (X) following these steps: 
+  1. Tokenize text 
+  2. Normalize text (stemming/ lemmatization/ with default English words)
+  3. Vectorize text data separately with previously preprocessed three kinds of data.
 
-
-### [Model]()
-
+### [Model](yy_packages/logistic_regression.py)
+- In general, train Logistic Regression Models and predict the popularity of posts.
+- This package provides "inside" and "outside" options:
+  - "inside" test the trained model using posts from the same subreddit group.
+  - "outside" test the trained model using posts from other similar subreddit groups.
+- Either option will give all accuracy, confusion matrix, and 20 most influential featured words for further comparation.
