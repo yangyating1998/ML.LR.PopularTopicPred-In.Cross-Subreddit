@@ -2,11 +2,11 @@
 
 This project trains [logistic regression models](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression) (popularity ~ text) with [reddit](https://www.reddit.com/) posts.
 
-- Code shows examples of three similar subreddits: [r/stocks](https://www.reddit.com/r/stocks/) | [r/StockMarket](https://www.reddit.com/r/StockMarket/) | [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/)
+- Code shows prediction examples of three similar subreddits: [r/stocks](https://www.reddit.com/r/stocks/) | [r/StockMarket](https://www.reddit.com/r/StockMarket/) | [r/wallstreetbets](https://www.reddit.com/r/wallstreetbets/)
 
-- However, these subreddits can be easily replaced in [main code](main.py) - communities = ['StockMarket', 'stocks', 'wallstreetbets']
+- These subreddits can be easily replaced with other subreddits in [main code](main.py) - communities = ['StockMarket', 'stocks', 'wallstreetbets']
 
-Trained model can be used to predict:
+Trained model will be used to predict:
 
 (1) the popularity of test posts inside the same subreddit community. 
 
